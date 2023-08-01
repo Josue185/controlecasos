@@ -17,8 +17,7 @@ const handleSubmit = (event) => {
     const numeroCaso = document.querySelector("#numeroCaso").value;
     const statusAtendimento = document.querySelector("#statusAtual").value;
     const novoStatus = document.querySelector("#statusAtualizados").value;
-    const print = document.querySelector("#screenshoot").value;
-    
+    const print = document.querySelector("#screenshot").value;
     
     fetch('https://api.sheetmonkey.io/form/stxiYNh36PsvzSqh2o4589', {
         method: 'post',
@@ -28,16 +27,15 @@ const handleSubmit = (event) => {
         },
         body: JSON.stringify({LDAP, dataAtendimento, numeroCaso, statusAtendimento, novoStatus, print})
     })
-        .then(() => {
-            removeLoading();
-            document.querySelector("#LDAP").value = '';
-            document.querySelector("#dataAtndimento").value = '';
-            document.querySelector("#numeroCaso").value = '';
-            document.querySelector("#statusAtual").value = '';
-            document.querySelector("#statusAtualizado").value = '';
-            document.querySelector("#screenshoot").value = '';
-            
-        });
+    .then(() => {
+        removeLoading();
+        document.querySelector("#LDAP").value = '';
+        document.querySelector("#dataAtendimento").value = '';
+        document.querySelector("#numeroCaso").value = '';
+        document.querySelector("#statusAtual").value = '';
+        document.querySelector("#statusAtualizados").value = '';
+        document.querySelector("#screenshot").value = '';
+    });
 }
 
-document.querySelector('form').addEventListener('submit', handleSubmit);
+document.querySelector('#formControle').addEventListener('submit', handleSubmit);
