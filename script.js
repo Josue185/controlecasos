@@ -30,13 +30,12 @@ const handleSubmit = (event) => {
     })
         .then(() => {
             removeLoading();
-            document.querySelector("#Agente").value = '';
             document.querySelector("#LDAP").value = '';
-            document.querySelector("#cogId").value = '';
-            document.querySelector("#teamLeader").value = '';
-            document.querySelector("#dataOfAbsance").value = '';
-            document.querySelector("#dateOfReturn").value = '';
-            document.querySelector("#totalDay").value = '';
+            document.querySelector("#dataAtndimento").value = '';
+            document.querySelector("#numeroCaso").value = '';
+            document.querySelector("#statusAtual").value = '';
+            document.querySelector("#statusAtualizado").value = '';
+            document.querySelector("#screenshoot").value = '';
             
         });
 }
