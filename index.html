@@ -4,39 +4,14 @@
   <title>Formulário para controle de Ajuda ao TLs</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM is ready for action");
-
-    function calcularDiferencaDias() {
-        var data1 = document.querySelectorAll('[type="date"]')[0].value;
-        var data2 = document.querySelectorAll('[type="date"]')[1].value;
-
-        var date1 = new Date(data1);
-        var date2 = new Date(data2);
-
-        var diffTime = Math.abs(date2 - date1);
-        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-        document.querySelector('#totalDay').value = diffDays;
-        return diffDays;
-    }
-
-    var camposData = document.querySelectorAll('[type="date"]');
-    camposData.forEach(function (campo) {
-        campo.addEventListener('change', calcularDiferencaDias);
-    });
-});
-</script>
-
   
 </head>
 <body>
   <h1>Controle dos Pedidos de Ajuda</h1>
 
-  <form id="formAtendimento">
-    <label for="Agente">Agente:</label>
-    <input type="text" id="Agente" name="Agente" required>
+  <form id="formControle">
+    <label for="Data">:</label>
+    <input type="date" id="dataAtendimento" name="dataAtendimento" required>
 
     <label for="LDAP">LDAP:</label>
     <input type="text" id="LDAP" name="LDAP" required>
@@ -64,15 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <label for="type">Type</label>
     <input type="text" id="type" name="type" required>
-
-    <label for="documentation">Documentation</label>
-    <input type="text" id="documentation" name="documentation" required>
-
-    <label for="month">Month</label>
-    <input type="text" id="month" name="month" required>
-
-    <label for="Year">Year</label>
-    <input type="text" id="year" name="year" required>
 
     <label for="comments">Comments:</label>
     <textarea id="comments" name="comments"></textarea>
