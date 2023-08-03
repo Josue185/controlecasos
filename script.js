@@ -2,11 +2,11 @@ const button = document.querySelector('button');
 
 const adicionaLoading = () => {
     button.innerHTML = '<img src="loading.png" class="loading"></img>';
-}
+};
 
 const removeLoading = () => {
     button.innerHTML = 'Enviar';
-}
+};
 
 const handleSubmit = (event) => {
     event.preventDefault();
@@ -38,6 +38,6 @@ const handleSubmit = (event) => {
         document.querySelector("#screenshot").value = '';
         document.querySelector("#time").value = '';
     });
-}
+};
 
 document.querySelector('#formControle').addEventListener('submit', handleSubmit);
