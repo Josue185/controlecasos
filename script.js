@@ -17,6 +17,7 @@ const handleSubmit = (event) => {
     const numeroCaso = document.querySelector("#numeroCaso").value;
     const statusAtendimento = document.querySelector("#statusAtual").value;
     const novoStatus = document.querySelector("#statusAtualizados").value;
+    const tarefas = document.querySelector("#tarefas").value;
     const print = document.querySelector("#screenshot").value;
     const time = document.querySelector("#time").value;
     
@@ -26,7 +27,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({LDAP, dataAtendimento, numeroCaso, statusAtendimento, novoStatus, print, time})
+        body: JSON.stringify({LDAP, dataAtendimento, numeroCaso, statusAtendimento, novoStatus, tarefas, print, time})
     })
     .then(() => {
         removeLoading();
