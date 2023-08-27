@@ -36,6 +36,7 @@ const handleSubmit = (event) => {
         document.querySelector("#numeroCaso").value = '';
         document.querySelector("#statusAtual").value = '';
         document.querySelector("#statusAtualizados").value = '';
+        document.querySelector("#tarefas").value = '';
         document.querySelector("#screenshot").value = '';
         document.querySelector("#time").value = '';
     });
