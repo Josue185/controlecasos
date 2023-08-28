@@ -19,6 +19,7 @@ const handleSubmit = (event) => {
     const novoStatus = document.querySelector("#statusAtualizados").value;
     const tarefas = document.querySelector("#tarefas").value;
     const print = document.querySelector("#screenshot").value;
+    const horaCaso = document.querySelector("#horacaso").value;
     const time = document.querySelector("#time").value;
     
     fetch('https://api.sheetmonkey.io/form/stxiYNh36PsvzSqh2o4589', {
@@ -27,7 +28,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({LDAP, dataAtendimento, numeroCaso, statusAtendimento, novoStatus, tarefas, print, time})
+        body: JSON.stringify({LDAP, dataAtendimento, numeroCaso, statusAtendimento, novoStatus, tarefas, print, horacaso, time})
     })
     .then(() => {
         removeLoading();
