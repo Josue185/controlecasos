@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Formulário para controle</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <h1>Controle de Casos</h1>
-
-  <form id="formControle" action="/enviar-dados" method="post">
+<form id="formControle" action="/enviar-dados" method="post">
     <label for="LDAP">LDAP:</label>
     <input type="text" id="LDAP" name="LDAP" required>
     
-    <label for="Data">Data do Atendimento/Follow Up:</label>
+    <label for="dataAtendimento">Data do Atendimento/Follow Up:</label>
     <input type="date" id="dataAtendimento" name="dataAtendimento" required>
 
     <label for="numeroCaso">Numero do Caso:</label>
     <input type="text" id="numeroCaso" name="numeroCaso" required>
 
-    <label for="menuOptions">Status</label>
+    <label for="statusAtual">Status</label>
     <select id="statusAtual" name="statusAtual">
       <option value="opcao1">Selecione</option>
       <option value="Attempt Contact">Attempt Contact</option>
@@ -26,34 +17,32 @@
       <option value="New Case">New Case</option>
       <option value="Ni-Awaiting Validation">Ni-Awaiting Validation</option>
       <option value="Ni-Awaiting Inputs">Ni-Awaiting Inputs</option>
-      <option value="In-Not Reachable">IN-Not Reachable</option>
-      <option value="In-Not Ready">IN-Not Ready</option>
-      
+      <option value="IN-Not Reachable">IN-Not Reachable</option>
+      <option value="IN-Not Ready">IN-Not Ready</option>
     </select>
 
-    <label for="menuOptions">Status Atualizado</label>
-    <select id="statusAtualizados" name="statusAtualizado">
+    <label for="statusAtualizado">Status Atualizado</label>
+    <select id="statusAtualizado" name="statusAtualizado">
       <option value="opcao1">Selecione</option>
       <option value="Attempt Contact">Attempt Contact</option>
       <option value="Reschedulle">AS-Reschedulle</option>
       <option value="AS-Work in Progress">AS-Work in Progress</option>
       <option value="Ni-Awaiting Validation">Ni-Awaiting Validation</option>
       <option value="Ni-Awaiting Inputs">Ni-Awaiting Inputs</option>
-      <option value="In-Not Reachable">In-Not Reachable</option>
-      <option value="In-Not Ready">In-Not Ready</option>
+      <option value="IN-Not Reachable">IN-Not Reachable</option>
+      <option value="IN-Not Ready">IN-Not Ready</option>
       <option value="SO-Verified">SO-Verified</option>
       <option value="SO-Unverified">SO-Unverified</option>
       <option value="SO-Verification Not Needed">SO-Verification Not Needed</option>
-      
     </select>
 
     <label for="tarefas">Tarefas:</label>
     <input type="text" id="tarefas" name="tarefas" required>
 
-    <label for="printqplus">Print do Q+:</label>
+    <label for="screenshot">Print do Q+:</label>
     <input type="text" id="screenshot" name="screenshot" required>
 
-    <label for="horaCall">Hora da Call:</label>
+    <label for="horacaso">Hora da Call:</label>
     <input type="time" id="horacaso" name="horacaso" required>
 
     <label for="time">Tempo Gasto no caso (em minutos):</label>
@@ -62,8 +51,4 @@
     <button type="submit">
       Enviar
     </button>
-  </form>
-
-  <script src="script.js"></script>
-</body>
-</html>
+</form>
