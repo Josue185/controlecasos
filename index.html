@@ -3,14 +3,12 @@
 <head>
   <title>Formulário para controle</title>
   <!-- Adicione os scripts do Firebase no cabeçalho do HTML -->
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <h1>Controle de Casos</h1>
 
-  <form id="formControle">
+ <form id="formControle" action="/enviar-dados" method="post">
     <label for="LDAP">LDAP:</label>
     <input type="text" id="LDAP" name="LDAP" required>
     
@@ -23,33 +21,49 @@
     <label for="menuOptions">Status</label>
     <select id="statusAtual" name="statusAtual">
       <option value="opcao1">Selecione</option>
+      <option value="Attempt Contact">Attempt Contact</option>
+      <option value="Reschedulle">AS-Reschedulle</option>
+      <option value="AS-Work in Progress">AS-Work in Progress</option>
       <option value="New Case">New Case</option>
-      <option value="Ni-Awaiting Validation">Ni- Awaiting Validation</option>
-      <option value="Ni-Awaiting Inputs">Awaiting Inputs</option>
-      <option value="In-Not Reachable">In-Not Reachable</option>
-      <option value="In-Not Ready">In-Not Ready</option>
-      <option value="Reschedulle">Reschedulle</option>
+      <option value="Ni-Awaiting Validation">Ni-Awaiting Validation</option>
+      <option value="Ni-Awaiting Inputs">Ni-Awaiting Inputs</option>
+      <option value="In-Not Reachable">IN-Not Reachable</option>
+      <option value="In-Not Ready">IN-Not Ready</option>
+      
     </select>
 
     <label for="menuOptions">Status Atualizado</label>
     <select id="statusAtualizados" name="statusAtualizado">
       <option value="opcao1">Selecione</option>
       <option value="Attempt Contact">Attempt Contact</option>
-      <option value="Ni-Awaiting Validation">Ni- Awaiting Validation</option>
-      <option value="Ni-Awaiting Inputs">Awaiting Inputs</option>
+      <option value="Reschedulle">AS-Reschedulle</option>
+      <option value="AS-Work in Progress">AS-Work in Progress</option>
+      <option value="Ni-Awaiting Validation">Ni-Awaiting Validation</option>
+      <option value="Ni-Awaiting Inputs">Ni-Awaiting Inputs</option>
       <option value="In-Not Reachable">In-Not Reachable</option>
       <option value="In-Not Ready">In-Not Ready</option>
       <option value="SO-Verified">SO-Verified</option>
-      <option value="Reschedulle">Reschedulle</option>
+      <option value="SO-Unverified">SO-Unverified</option>
+      <option value="SO-Verification Not Needed">SO-Verification Not Needed</option>
+      
     </select>
+
+    <label for="tarefas">Tarefas:</label>
+    <input type="text" id="tarefas" name="tarefas" required>
 
     <label for="printqplus">Print do Q+:</label>
     <input type="text" id="screenshot" name="screenshot" required>
+
+    <label for="horaCall">Hora da Call:</label>
+    <input type="time" id="horacaso" name="horacaso" required>
 
     <label for="time">Tempo Gasto no caso (em minutos):</label>
     <input type="number" id="time" name="time" pattern="[\d]+" required>
 
     <button type="submit">
+      Enviar
+    </button>
+  </form>
       Enviar
     </button>
   </form>
