@@ -2,10 +2,6 @@
 
 
 
-<img src="https://media.licdn.com/dms/image/D4D22AQFXdO2TxlwwIA/feedshare-shrink_1280/0/1691620122575?e=1697673600&amp;v=beta&amp;t=p-lEC2KlSgy-xay1ayzn2StL_BUogvYvHre2aWBGpEc" alt="Não foi fornecido texto alternativo para esta imagem"/>![image](https://github.com/Josue185/controlecasos/assets/92592495/3f43677b-77c0-42de-92fc-73acb44d997d)
-
-
-
 
 
 Desenvolvi um formulário personalizado em JavaScript, CSS e HTML(Imagem 1) para capturar dados cruciais de atendimentos. Esse formulário alimenta dinamicamente uma planilha no Google Sheets, 
