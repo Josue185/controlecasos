@@ -18,7 +18,6 @@ const handleSubmit = (event) => {
     const statusAtendimento = document.querySelector("#statusAtual").value;
     const novoStatus = document.querySelector("#statusAtualizados").value;
     const tarefas = document.querySelector("#tarefas").value;
-    const print = document.querySelector("#screenshot").value;
     const hora = document.querySelector("#horacaso").value;
     const time = document.querySelector("#time").value;
     
@@ -28,7 +27,7 @@ const handleSubmit = (event) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({LDAP, dataAtendimento, numeroCaso, statusAtendimento, novoStatus, tarefas, print, hora, time})
+        body: JSON.stringify({LDAP, dataAtendimento, numeroCaso, statusAtendimento, novoStatus, tarefas, hora, time})
     })
     .then(() => {
         removeLoading();
@@ -38,7 +37,6 @@ const handleSubmit = (event) => {
         document.querySelector("#statusAtual").value = '';
         document.querySelector("#statusAtualizados").value = '';
         document.querySelector("#tarefas").value = '';
-        document.querySelector("#screenshot").value = '';
         document.querySelector("#time").value = '';
     });
 };
